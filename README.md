@@ -1,9 +1,16 @@
-# Phrase Manager App
+# Phrase Manager
 
-This project is built with Next.js and combines built-in components like `Link` with shadcn/ui components such as `Button` and `Skeleton`.
+A Next.js application for managing and persisting phrases locally in the browser.
 
-Additionally, I created custom components including `PhraseForm` and `ThemeToggle` to enhance functionality.
+## Features
 
-The app uses `localStorage` to persist phrases, so it doesn't have a traditional backend. However, `localStorage` emulates this persistence to demonstrate the app's utility.
+- **Client-side persistence**: Uses `localStorage` to save phrases without requiring a backend
+- **Modern UI**: Built with shadcn/ui components (`Button`, `Skeleton`) and Next.js built-in components (`Link`)
+- **Custom components**: Includes `PhraseForm` for adding phrases and `ThemeToggle` for theme switching
+- **Full CRUD operations**: Create, read, and delete phrases directly from the interface
 
-You can also delete phrases from `localStorage` directly through the interface.
+## Tech Stack
+
+- Next.js
+- shadcn/ui
+- localStorage for data persistence
