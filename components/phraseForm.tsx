@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Button } from "./ui/button";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle, } from "./ui/card";
 
 type Phrase = {
   id: string;
@@ -83,14 +84,27 @@ export default function PhraseForm({ name, phrase }: Props) {
         Clear phrases
       </Button>
       </div>
-
-      <ul className="mt-4 space-y-2">
-        {phrases.map(p => (
-          <li key={p.id}>
-            <strong>{p.name}</strong>: {p.phrase}
-          </li>
+      
+      <div className="pt-4 grid grid-cols-3 gap-8">
+        {phrases
+        .filter(p => p.name)
+        .map(p => (
+          <Card key={p.id} className="border-2 border-slate-900">
+            <CardHeader>
+              <CardTitle>{p.name}</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p>{p.phrase}</p>
+            </CardContent>
+            <CardFooter>
+              <Button 
+                className="secondary"
+                onClick={() => {setPhrases(prev => prev.filter(item => item.id !== p.id))}}
+                >Clear card</Button>
+            </CardFooter>
+          </Card>
         ))}
-      </ul>
+      </div>
     </>
   );
 }
