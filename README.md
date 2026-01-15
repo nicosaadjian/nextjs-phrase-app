@@ -1,4 +1,4 @@
-# Phrase Manager
+# Small Phrase App
 
 A Next.js application for managing and persisting phrases locally in the browser.
 
@@ -14,3 +14,7 @@ A Next.js application for managing and persisting phrases locally in the browser
 - Next.js
 - shadcn/ui
 - localStorage for data persistence
+
+## Live Deploy
+
+👉 https://nextjs-phrase-app.netlify.app/
